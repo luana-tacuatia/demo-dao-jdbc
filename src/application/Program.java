@@ -13,6 +13,8 @@ public class Program {
 
         SellerDao sellerDao = DaoFactory.createSellerDao(); //forma de injetar uma dependência sem explicitar a implementação; Assim o programa não conhece a implementação, conhece somente a interface.
 
+        System.out.println("----- TEST 1: seller findById -----");
+
         Seller seller = sellerDao.findById(3);
 
         System.out.println(seller);
