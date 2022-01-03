@@ -3,8 +3,10 @@ package application;
 import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
 import model.entities.Department;
+import model.entities.Seller;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -27,5 +29,10 @@ public class Program2 {
         for (Department dep : list){
             System.out.println(dep);
         }
+
+        System.out.println("\n----- TEST 3: insert -----");
+        Department newDepartment = new Department(null, "Games");
+        departmentDao.insert(newDepartment);
+        System.out.println("Inserted! New id = " + newDepartment.getId());
     }
 }
